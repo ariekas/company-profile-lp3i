@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CrudBlogController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +14,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get("/", [CrudBlogController::class, 'index'])->name("home"); 
+Route::get("/program", function () {
+    return view('program');
+})->name('showProgram');
+Route::get('/blog/{id}', [CrudBlogController::class, 'show'])->name('blog.show');
+
+
