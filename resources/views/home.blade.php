@@ -1170,15 +1170,14 @@
                             <div class="card-body">
                                 <h5 class="card-title" style="font-size: 1.25rem; font-weight: bold; color: #333;">
                                     {{ $blog->judul }}</h5>
-                                <p class="card-text" style="font-size: 0.9rem; color: #666;">
-                                    {{ strip_tags($blog->deskripsi) }}</p>
+                                <p class="card-text" style="font-size: 0.9rem; color: #666; text-align: justify;">
+                                    {{ Str::limit(strip_tags($blog->deskripsi), 200) }}</p>
                             </div>
-                            <div class="card-footer bg-transparent border-top-0">
+                            <div class="card-footer bg-transparent border-top-0" style="">
                             <a href="{{ route('blog.show', $blog->id) }}" class="btn btn-primary"
-    style="background-color: #007bff; border: none; border-radius: 25px; padding: 8px 20px; font-size: 0.9rem;">
+    style="background-color: #007bff; border: none; border-radius: 25px; font-size: 0.9rem;">
     Baca Selengkapnya
 </a>
-
                             </div>
                         </div>
                     </div>

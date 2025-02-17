@@ -307,7 +307,7 @@ footer {
     font-size: 2.5rem;
     font-weight: bold;
     color: #333;
-    margin-bottom: 15px;
+    margin-top: 20px;
 }
 
 /* Styling untuk deskripsi blog */
@@ -315,20 +315,26 @@ footer {
     font-size: 1.125rem;
     line-height: 1.75;
     color: #555;
-    margin-bottom: 25px;
+    margin-top: 10px;
 }
 
 /* Styling untuk tombol kembali */
 .page-blog .back-link {
+    display: inline-block;
     font-size: 1rem;
     font-weight: 600;
-    color: #007bff;
+    color: #fff;
+    background-color: #0d6efd;
     text-decoration: none;
-    transition: color 0.3s ease;
+    border-color: #0d6efd;
+    padding: 0.375rem 0.75rem;
+    border-radius: 0.25rem;
+    transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
 }
 
+
 .page-blog .back-link:hover {
-    color: #0056b3;
+    color: #000;
 }
 
 /* Responsif untuk ukuran layar kecil */
@@ -375,7 +381,7 @@ footer {
                 {!! $blog->deskripsi !!}
             </p>
         </div>
-        <div class="back-button">
+        <div class="back-button" style="margin-top: 20px;">
             <a href="{{ url()->previous() }}" class="back-link">
                 ← Kembali
             </a>
@@ -388,7 +394,7 @@ footer {
         <div class="footer-content">
             <div>
                 <div class="footer-img">
-                    <img src="Image/Logo LP3i Putih.png" alt="Logo" />
+                    <img src="{{ asset('Image/Logo LP3i Putih.png') }}" alt="Logo" />
                 </div>
                 <div class="social-links">
                     <div class="social-icon">
