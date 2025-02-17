@@ -15,10 +15,10 @@ class CrudBlogController extends Controller
     }
     
     public function show($id)
-{
-    $blog = Blog::findOrFail($id); // Mencari blog berdasarkan ID
-    return view('blogs.show', compact('blog'));
-}
+    {
+        $blog = Blog::findOrFail($id); // Mencari blog berdasarkan ID
+        return view('blogs.show', compact('blog'));
+    }
 
 }
 

@@ -352,7 +352,7 @@ footer {
 
 
 <nav class="navbar">
-    <a href=""><img src="Image/Logo LP3i Putih.png" alt="Logo" class="nav-logo" /></a>
+    <a href=""><img src="{{ asset('Image/Logo LP3i Putih.png') }}" alt="Logo" class="nav-logo" /></a>
     <div class="hamburger">
         <i class="bx bx-menu"></i>
     </div>
